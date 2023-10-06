@@ -14,6 +14,14 @@ public class Contacto {
         return mail;
     }
 
+    public Contacto(){
+
+    }
+
+    public Contacto(String name, String mail){
+        this.name = name;
+        this.mail= mail; 
+    }
 
 
 
