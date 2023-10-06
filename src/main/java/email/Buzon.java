@@ -20,5 +20,7 @@ public class Buzon {
     public String getMail() {
         return mail;
     }
-
+    
+   
+    int a;
 }
