@@ -42,7 +42,7 @@ public class CorreoTest {
         assertTrue(correo.getPara().contains(destinatario2));
 
     }
-      @Test
+    @Test
     public void crearBuzon_Test(){
 
         EmailManager mailmanager = new EmailManager(); 
@@ -63,9 +63,12 @@ public class CorreoTest {
 
         assertTrue(mailmanager.listaBuzones.get(0).getMail().contains("therealsensei@gmail.com.ar"));
         assertTrue(mailmanager.listaBuzones.get(1).getMail().contains("aquinopla@gmail.com"));
-        assertTrue(mailmanager.listaBuzones.get(2).getMail().contains("aquinopla@gmail.com"));
-    
-    
-}
+        assertTrue(mailmanager.listaBuzones.get(2).getMail().contains("aquinopla@gmail.com"));   
+    }
+    @Test
+    public void testdeAlgo(){
+
+        
+    }
   
 }
