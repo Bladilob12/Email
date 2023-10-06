@@ -35,10 +35,7 @@ public class Correo {
     public Contacto getRemintente() {
         return remitente;
     }
-
-    int mata;
-    int corradi;
-
+    
 }
 
 
