@@ -37,6 +37,7 @@ public class Correo {
     }
 
     int mata;
+    int corradi;
 
 }
 
