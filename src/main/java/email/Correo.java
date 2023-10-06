@@ -36,7 +36,7 @@ public class Correo {
         return remitente;
     }
 
-
+    int mata;
 
 }
 
