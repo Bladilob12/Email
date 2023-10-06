@@ -21,6 +21,4 @@ public class Buzon {
         return mail;
     }
     
-   
-    int a;
 }
