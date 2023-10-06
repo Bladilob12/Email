@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Correo {
 
-    public String asunto= "";
-    public String conetenido = "";
+    public String asunto;
+    public String contenido ;
     public List<Contacto> para;
     public Contacto remitente;
 
@@ -15,17 +15,24 @@ public class Correo {
         this.remitente = new Contacto();
         this.para = new ArrayList<>();
     }
+
+    public Correo(String asunto, String contenido, Contacto remitente, List<Contacto> para){
+        this.asunto = asunto;
+        this.contenido = contenido;
+        this.para = para;
+        this.remitente = remitente;
+    }
     
     public String getAsunto() {
         return asunto;
     }
     
     public String getConetenido() {
-        return conetenido;
+        return contenido;
     }
     
     public void setConetenido(String conetenido) {
-        this.conetenido = conetenido;
+        this.contenido = conetenido;
     }
 
     public List<Contacto> getPara() {
@@ -35,7 +42,7 @@ public class Correo {
     public Contacto getRemintente() {
         return remitente;
     }
-    
+
 }
 
 
