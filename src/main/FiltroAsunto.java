@@ -1,4 +1,6 @@
 package email;
+import java.util.stream.Collectors;
+
 
 public class FiltroAsunto {
     public List<Correo> filtrarAsunto(Buzon buzon, String asunto) {

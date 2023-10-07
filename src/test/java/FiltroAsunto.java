@@ -37,6 +37,6 @@ public class FiltroAsunto {
     assertEquals(2,correoFiltrado.size());
     assertEquals("saludo",correoFiltrado.get(0).getAsunto());
     assertEquals("saludo",correoFiltrado.get(1).getAsunto());
-} 
     
+} 
 }
