@@ -19,11 +19,9 @@ public class BuzonTest {
         List<Contacto> para = new ArrayList<>();
 
         Contacto remitente = new Contacto("sensei", "therealsensei@gmail.com.ar");
-
         Contacto destinatario = new Contacto("lucho","aquinopla@gmail.com");
-
         Contacto destinatario1 = new Contacto("lucho","aquinopla@gmail.com");
-
+        
         Correo correo = new Correo("buenas", "hola", remitente , para);
 
         correo.para.add(destinatario);
@@ -48,4 +46,5 @@ public class BuzonTest {
 
         assertTrue(buzon1.getBandejeEnviados().isEmpty());
     }
+
 }
