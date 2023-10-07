@@ -9,6 +9,8 @@ import email.Buzon;
 import email.Contacto;
 import email.Correo;
 
+//no funciona el import de filtrar contenido
+
 public class FiltroAsunto {
     @Test 
     public void filtrarAsuntoTest(){
@@ -37,6 +39,6 @@ public class FiltroAsunto {
     assertEquals(2,correoFiltrado.size());
     assertEquals("saludo",correoFiltrado.get(0).getAsunto());
     assertEquals("saludo",correoFiltrado.get(1).getAsunto());
-    
+
 } 
 }

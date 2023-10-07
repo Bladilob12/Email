@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.junit.Test;
 
+import email.Buzon;
 import email.Contacto;
 import email.Correo;
 import email.EmailManager;
@@ -33,6 +34,18 @@ public class BuzonTest {
         assertTrue(mailmanager.listaBuzones.get(1).getMail().contains("aquinopla@gmail.com"));
         assertTrue(mailmanager.listaBuzones.get(2).getMail().contains("aquinopla@gmail.com"));   
     }
-    
-    
+    @Test 
+    public void bandejaEntradaIsEmpty(){
+       
+        Buzon buzon1 = new Buzon(new ArrayList<>(),new ArrayList<>(), "hola");
+
+        assertTrue(buzon1.getBandejaEntrada().isEmpty());
+    }
+    @Test 
+    public void bandejaEnviadosIsEmpty(){
+       
+        Buzon buzon1 = new Buzon(new ArrayList<>(),new ArrayList<>(), "hola");
+
+        assertTrue(buzon1.getBandejeEnviados().isEmpty());
+    }
 }

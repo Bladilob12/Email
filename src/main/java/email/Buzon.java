@@ -9,6 +9,15 @@ public class Buzon {
     public List<Correo> bandejaEnviados;
     public List<Correo> bandejaEntrada;
 
+    public Buzon(){
+
+    }
+    public Buzon(List<Correo> bandejaEnviados,List<Correo> bandejaEntrada, String mail ){
+        this.bandejaEnviados = bandejaEnviados;
+        this.bandejaEntrada = bandejaEntrada;
+        this.mail = mail;
+    }
+
     public List<Correo> getBandejaEntrada() {
         return bandejaEntrada;
     }

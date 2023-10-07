@@ -21,4 +21,5 @@ public class ContactoTest {
         Contacto contacto = new Contacto();
         assertNotNull(contacto);
     } 
+
 }
