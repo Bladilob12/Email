@@ -27,7 +27,7 @@ public class Correo {
         return asunto;
     }
     
-    public String getConetenido() {
+    public String getContenido() {
         return contenido;
     }
     
