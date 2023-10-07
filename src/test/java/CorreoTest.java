@@ -26,7 +26,6 @@ public class CorreoTest {
 
         Contacto contacto = new Contacto();
         assertNotNull(contacto);
-
     }
     @Test 
     public void agregarContactoPara(){
@@ -65,10 +64,5 @@ public class CorreoTest {
         assertTrue(mailmanager.listaBuzones.get(1).getMail().contains("aquinopla@gmail.com"));
         assertTrue(mailmanager.listaBuzones.get(2).getMail().contains("aquinopla@gmail.com"));   
     }
-    @Test
-    public void testdeAlgo(){
-
-        
-    }
-  
+   
 }
