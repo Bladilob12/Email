@@ -1,5 +1,12 @@
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+
 import org.junit.Test;
+
+import email.Contacto;
 import email.Correo;
 
 
@@ -11,6 +18,13 @@ public class CorreoTest {
         assertNotNull(correo);
 
     }
-    
-   
+    @Test
+    public void correoCaracteristicas(){
+
+    Contacto remitente = new Contacto();
+    Correo correo1 = new Correo("Saludo", "Holaa",remitente ,new ArrayList<>() );
+
+     assertEquals(correo1.getAsunto(),"Saludo");
+     assertEquals(correo1.getContenido(),"Holaa");
+    }
 }

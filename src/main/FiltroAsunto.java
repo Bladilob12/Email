@@ -9,6 +9,6 @@ public class FiltroAsunto {
         List<Correo> correoFiltrado = bandejaEntrada.stream().filter(correo -> correo.getAsunto().contains(asunto)).collect(Collectors.toList());
 
         return correoFiltrado;
-}
+    }
 }
 
