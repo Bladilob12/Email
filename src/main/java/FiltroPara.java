@@ -13,6 +13,7 @@ public class FiltroPara {
 
         for (Contacto destinatario : correo.para) {
             Predicate<Buzon> buscarBuzon = b -> destinatario.getMail().equals(b.getMail());
+            
             listaMailsUsuario.addAll(listaMailsUsuario.stream().filter(buscarBuzon).collect(Collectors.toList()));
         }
         for (Buzon buzon : listaMailsUsuario) {
