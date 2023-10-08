@@ -23,8 +23,8 @@ public class FiltroFechaTest {
     Contacto remitente3 = new Contacto();
     
     Correo correo1 = new Correo("saludo", "Hola  estas",remitente ,new ArrayList<>(),"25/8");
-    Correo correo2 = new Correo("saludo", "Hola como estas",remitente2 ,new ArrayList<>(),"23/8");
-    Correo correo3 = new Correo("saludo", "Chau como estas",remitente3 ,new ArrayList<>(),"25/8");
+    Correo correo2 = new Correo("saludo", "Hola como estas",remitente2 ,new ArrayList<>(),"25/8");
+    Correo correo3 = new Correo("saludo", "Chau como estas",remitente3 ,new ArrayList<>(),"24/8");
 
     buzon1.setBandejaEntrada(bandejaEntrada);
     buzon1.getBandejaEntrada().add(correo1);
@@ -34,7 +34,7 @@ public class FiltroFechaTest {
 
     FiltroFecha filtro = new FiltroFecha();
     List<Correo>correoFiltrado = filtro.filtrarFecha(buzon1,"25/8");
-
+ 
     assertEquals(2,correoFiltrado.size());
     
 }

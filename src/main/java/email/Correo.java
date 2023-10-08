@@ -22,6 +22,7 @@ public class Correo {
         this.contenido = contenido;
         this.para = para;
         this.remitente = remitente;
+        this.fecha = fecha;
     }
     
     public String getAsunto() {

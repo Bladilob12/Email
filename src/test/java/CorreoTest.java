@@ -25,5 +25,7 @@ public class CorreoTest {
 
      assertEquals(correo1.getAsunto(),"Saludo");
      assertEquals(correo1.getContenido(),"Holaa");
+     assertEquals(correo1.getFecha(),"10/5/2023");
+
     }
 }
