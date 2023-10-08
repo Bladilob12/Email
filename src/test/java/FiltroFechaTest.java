@@ -8,11 +8,11 @@ import org.junit.Test;
 import email.Buzon;
 import email.Contacto;
 import email.Correo;
-import email.FiltroContenido;
+import email.FiltroFecha;
 
-public class FiltroContenidoTest {
+public class FiltroFechaTest {
     @Test
-    public void filtrarContrnidoTest(){
+    public void filtrarFechaTest(){
        
     Buzon buzon1 =  new Buzon();
 
@@ -23,7 +23,7 @@ public class FiltroContenidoTest {
     Contacto remitente3 = new Contacto();
     
     Correo correo1 = new Correo("saludo", "Hola  estas",remitente ,new ArrayList<>(),"25/8");
-    Correo correo2 = new Correo("saludo", "Hola como estas",remitente2 ,new ArrayList<>(),"25/8");
+    Correo correo2 = new Correo("saludo", "Hola como estas",remitente2 ,new ArrayList<>(),"23/8");
     Correo correo3 = new Correo("saludo", "Chau como estas",remitente3 ,new ArrayList<>(),"25/8");
 
     buzon1.setBandejaEntrada(bandejaEntrada);
@@ -32,11 +32,10 @@ public class FiltroContenidoTest {
     buzon1.getBandejaEntrada().add(correo2);
     buzon1.getBandejaEntrada().add(correo3);
 
-    FiltroContenido filtro = new FiltroContenido();
-    List<Correo>correoFiltrado = filtro.filtrarContenido(buzon1,"Hola");
+    FiltroFecha filtro = new FiltroFecha();
+    List<Correo>correoFiltrado = filtro.filtrarFecha(buzon1,"25/8");
 
     assertEquals(2,correoFiltrado.size());
-    assertEquals("Hola  estas",correoFiltrado.get(0).getContenido());
-    assertEquals("Hola como estas",correoFiltrado.get(1).getContenido());
-    }
+    
+}
 }

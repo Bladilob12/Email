@@ -8,6 +8,7 @@ public class Correo {
 
     public String asunto;
     public String contenido ;
+    public String fecha;
     public List<Contacto> para;
     public Contacto remitente;
 
@@ -16,7 +17,7 @@ public class Correo {
         this.para = new ArrayList<>();
     }
 
-    public Correo(String asunto, String contenido, Contacto remitente, List<Contacto> para){
+    public Correo(String asunto, String contenido, Contacto remitente, List<Contacto> para,String fecha){
         this.asunto = asunto;
         this.contenido = contenido;
         this.para = para;
@@ -40,6 +41,12 @@ public class Correo {
     }
     
     public Contacto getRemintente() {
+        return remitente;
+    }
+    public String getFecha() {
+        return fecha;
+    }
+    public Contacto getRemitente() {
         return remitente;
     }
 

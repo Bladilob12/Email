@@ -23,9 +23,9 @@ public class FiltrarAsuntoTest {
         Contacto remitente2 = new Contacto();
         Contacto remitente3 = new Contacto();
         
-        Correo correo1 = new Correo("saludo", "Hola  estas",remitente ,new ArrayList<>());
-        Correo correo2 = new Correo("saludo", "Hola como estas",remitente2 ,new ArrayList<>());
-        Correo correo3 = new Correo("despedida", "Chau como estas",remitente3 ,new ArrayList<>());
+        Correo correo1 = new Correo("saludo", "Hola  estas",remitente ,new ArrayList<>(),"25/8");
+        Correo correo2 = new Correo("saludo", "Hola como estas",remitente2 ,new ArrayList<>(),"25/8");
+        Correo correo3 = new Correo("despedida", "Chau como estas",remitente3 ,new ArrayList<>(),"25/8");
     
         buzon1.setBandejaEntrada(bandejaEntrada);
 

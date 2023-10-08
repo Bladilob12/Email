@@ -1,25 +1,16 @@
 package email;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class FiltroPara {
-    List<Buzon> listaMailsUsuario = new ArrayList<>();
-    List<Contacto> destinatarios = correo.getPara(); // Obtén la lista de destinatarios del correo
+    List<Correo> listaMailsUsuario = new ArrayList<>();
 
-    for (Contacto destinatario : destinatarios) {
-        Predicate<Buzon> buscarBuzon = b -> destinatario.getMail().equals(b.getMail());
+    public void filtrarPara(Buzon usuario, String contacto) {
         
-        // Filtra los buzones que coinciden con el destinatario y agrégalos a una nueva lista
-        List<Buzon> buzonesFiltrados = listaMailsUsuario.stream().filter(buscarBuzon).collect(Collectors.toList());
+        Predicate<Correo> buscarUsuario = mail -> contacto.equals(mail.getRemitente().getMail());
         
-        // Agrega los buzones filtrados a listaMailsUsuario
-        listaMailsUsuario.addAll(buzonesFiltrados);
-    }
-    
-    // Agrega el correo a la bandeja de entrada de los buzones encontrados
-    for (Buzon buzon : listaMailsUsuario) {
-        buzon.getBandejaEntrada().add(correo);
-    }
+        listaMailsUsuario.addAll(usuario.bandejaEntrada.stream().filter(buscarUsuario).collect(Collectors.toList()));
+    }    
 }
-
