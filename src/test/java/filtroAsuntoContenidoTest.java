@@ -10,7 +10,7 @@ import email.Contacto;
 import email.Correo;
 import email.FiltroAsuntoContenido;
 
-public class filtroAsuntoContenido {
+public class filtroAsuntoContenidoTest {
         @Test
         public void FiltrosAsuntocontenido(){
         Buzon buzon1 =  new Buzon();

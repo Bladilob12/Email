@@ -13,7 +13,4 @@ public class FiltroContenido {
 
         return correoFiltrado;
     }
-
-
-
 }
