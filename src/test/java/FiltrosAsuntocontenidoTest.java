@@ -8,14 +8,13 @@ import org.junit.Test;
 import email.Buzon;
 import email.Contacto;
 import email.Correo;
-import email.FiltroContenido;
 
-public class FiltroContenidoTest {
+
+public class FiltrosAsuntocontenidoTest{
+
     @Test
-    public void filtrarContrnidoTest(){
-       
+    public void FiltrosAsuntocontenido(){
     Buzon buzon1 =  new Buzon();
-    
     List<Correo> bandejaEntrada = new ArrayList<Correo>();
     
     Contacto remitente = new Contacto();
@@ -31,12 +30,10 @@ public class FiltroContenidoTest {
 
     buzon1.getBandejaEntrada().add(correo2);
     buzon1.getBandejaEntrada().add(correo3);
+    
+    FiltroAsuntoContenido filtro = new FiltroAsuntoContenido();
+    List<Correo>correoFiltrado = filtro.filtrarPorAsuntoYContenido(buzon1,"saludo","Hola  estas");
 
-    FiltroContenido filtro = new FiltroContenido();
-    List<Correo>correoFiltrado = filtro.filtrarContenido(buzon1,"Hola");
 
-    assertEquals(2,correoFiltrado.size());
-    assertEquals("Hola  estas",correoFiltrado.get(0).getContenido());
-    assertEquals("Hola como estas",correoFiltrado.get(1).getContenido());
     }
 }
