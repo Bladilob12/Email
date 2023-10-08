@@ -1,8 +1,6 @@
+package email;
 import java.util.ArrayList;
 import java.util.List;
-
-import email.Buzon;
-import email.Correo;
 
 public class FiltroAsuntoContenido {
         
@@ -15,7 +13,6 @@ public List<Correo> filtrarPorAsuntoYContenido(Buzon buzon, String asunto, Strin
                 correosFiltrados.add(correo);
             }
         }
-
         return correosFiltrados;
     }
 }

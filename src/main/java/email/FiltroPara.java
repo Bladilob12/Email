@@ -22,4 +22,4 @@ public class FiltroPara {
         buzon.getBandejaEntrada().add(correo);
     }
 }
-}
+
