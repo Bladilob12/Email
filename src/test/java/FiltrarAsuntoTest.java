@@ -1,4 +1,3 @@
-
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
@@ -9,16 +8,15 @@ import org.junit.Test;
 import email.Buzon;
 import email.Contacto;
 import email.Correo;
-import email.FiltroAsunto;
-//no funciona el import de Asunto
+import email.FiltroAsunto; // Asegúrate de que la clase FiltroAsunto esté importada correctamente
 
 public class FiltrarAsuntoTest {
-    public class FiltroAsunto {
-        @Test 
-        public void filtrarAsuntoTest(){
-            
+
+    @Test 
+    public void filtrarAsuntoTest(){
+        
         Buzon buzon1 =  new Buzon();
-    
+
         List<Correo> bandejaEntrada = new ArrayList<Correo>();
         
         Contacto remitente = new Contacto();
@@ -30,18 +28,17 @@ public class FiltrarAsuntoTest {
         Correo correo3 = new Correo("despedida", "Chau como estas",remitente3 ,new ArrayList<>());
     
         buzon1.setBandejaEntrada(bandejaEntrada);
+
         buzon1.getBandejaEntrada().add(correo1);
-    
         buzon1.getBandejaEntrada().add(correo2);
         buzon1.getBandejaEntrada().add(correo3);
     
         FiltroAsunto filtro = new FiltroAsunto();
-        List<Correo>correoFiltrado = filtro.filtrarAsunto(buzon1,"saludo");
+        List<Correo> correoFiltrado = filtro.filtrarAsunto(buzon1,"saludo");
     
-        assertEquals(2,correoFiltrado.size());
-        assertEquals("saludo",correoFiltrado.get(0).getAsunto());
-        assertEquals("saludo",correoFiltrado.get(1).getAsunto());
-    
-        } 
-    }
+        assertEquals(2, correoFiltrado.size());
+        assertEquals("saludo", correoFiltrado.get(0).getAsunto());
+        assertEquals("saludo", correoFiltrado.get(1).getAsunto());
+    } 
 }
+
