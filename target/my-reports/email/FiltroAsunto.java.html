@@ -3,14 +3,15 @@
 import java.util.List;
 import java.util.stream.Collectors;
 
-<span class="fc" id="L6">public class FiltroAsunto {</span>
+
+<span class="fc" id="L7">public class FiltroAsunto {</span>
     public List&lt;Correo&gt; filtrarAsunto(Buzon buzon, String asunto) {
 
-<span class="fc" id="L9">        List&lt;Correo&gt; bandejaEntrada = buzon.getBandejaEntrada();</span>
+<span class="fc" id="L10">        List&lt;Correo&gt; bandejaEntrada = buzon.getBandejaEntrada();</span>
 
-<span class="fc" id="L11">        List&lt;Correo&gt; correoFiltrado = bandejaEntrada.stream().filter(correo -&gt; correo.getAsunto().contains(asunto)).collect(Collectors.toList());</span>
+<span class="fc" id="L12">        List&lt;Correo&gt; correoFiltrado = bandejaEntrada.stream().filter(correo -&gt; correo.getAsunto().contains(asunto)).collect(Collectors.toList());</span>
 
-<span class="fc" id="L13">        return correoFiltrado;</span>
+<span class="fc" id="L14">        return correoFiltrado;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

@@ -2,57 +2,28 @@
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
+
 
 public class EmailManager{
 
     public List&lt;Buzon&gt; listaBuzones;
 
 
-<span class="fc" id="L13">    public EmailManager(){</span>
-<span class="fc" id="L14">        listaBuzones = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L15">    }</span>
+<span class="fc" id="L12">    public EmailManager(){</span>
+<span class="fc" id="L13">        listaBuzones = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L14">    }</span>
 
     public void crearBuzon(Correo correo){
-<span class="fc" id="L18">        Buzon buzon1 = new Buzon();</span>
+<span class="fc" id="L17">        Buzon buzon1 = new Buzon();</span>
 
-<span class="fc" id="L20">        buzon1.mail = correo.remitente.mail;</span>
-<span class="fc" id="L21">        listaBuzones.add(buzon1);</span>
+<span class="fc" id="L19">        buzon1.mail = correo.remitente.mail;</span>
+<span class="fc" id="L20">        listaBuzones.add(buzon1);</span>
 
-<span class="fc bfc" id="L23" title="All 2 branches covered.">        for (Contacto destinatario : correo.para) {</span>
-<span class="fc" id="L24">            Buzon buzon = new Buzon();</span>
-<span class="fc" id="L25">            buzon.mail = destinatario.mail;</span>
-<span class="fc" id="L26">            listaBuzones.add(buzon);</span>
-<span class="fc" id="L27">        }</span>
-<span class="fc" id="L28">    }</span>
-    
-    public void agregarCorreoBandejaEnviados(Correo correo){
-        
-<span class="fc" id="L32">        Predicate&lt;Buzon&gt; buscarbuzon = b -&gt; correo.getRemintente().getMail().equals(b.getMail());</span>
-<span class="fc" id="L33">        List&lt;Buzon&gt; listaCorreoUsuario = listaBuzones.stream().filter(buscarbuzon).collect(Collectors.toList());</span>
-
-<span class="pc bpc" id="L35" title="1 of 2 branches missed.">        for(Buzon buzon1 : listaCorreoUsuario){</span>
-<span class="nc" id="L36">            buzon1.bandejaEnviados.add(correo);</span>
-<span class="nc" id="L37">        }</span>
-<span class="nc" id="L38">    }</span>
-
-    public void agregarCorreoBandejaEntrada(Correo correo){
-<span class="nc" id="L41">        List&lt;Buzon&gt; listaCorreoUsuario = new ArrayList&lt;&gt;();</span>
-
-<span class="nc bnc" id="L43" title="All 2 branches missed.">        for(Contacto destinatario : correo.para){</span>
-<span class="nc" id="L44">            Predicate&lt;Buzon&gt; buscarEnBuzon = b -&gt; destinatario.getMail().equals(b.getMail());</span>
-<span class="nc" id="L45">            listaCorreoUsuario.addAll(listaCorreoUsuario.stream().filter(buscarEnBuzon).collect(Collectors.toList()));</span>
-<span class="nc" id="L46">        }</span>
-<span class="nc bnc" id="L47" title="All 2 branches missed.">        for(Buzon buzon1 : listaCorreoUsuario){</span>
-<span class="nc" id="L48">            buzon1.bandejaEntrada.add(correo);</span>
-<span class="nc" id="L49">        }</span>
-<span class="nc" id="L50">    }</span>
-
-    public void enviarCorreo(Correo correo){
-<span class="fc" id="L53">        crearBuzon(correo);</span>
-<span class="nc" id="L54">        agregarCorreoBandejaEnviados(correo);</span>
-<span class="nc" id="L55">        agregarCorreoBandejaEntrada(correo);</span>
-<span class="nc" id="L56">    }</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        for (Contacto destinatario : correo.para) {</span>
+<span class="fc" id="L23">            Buzon buzon = new Buzon();</span>
+<span class="fc" id="L24">            buzon.mail = destinatario.mail;</span>
+<span class="fc" id="L25">            listaBuzones.add(buzon);</span>
+<span class="fc" id="L26">        }</span>
+<span class="fc" id="L27">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
