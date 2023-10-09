@@ -11,8 +11,10 @@ import email.FiltroPara;
 
 public class FiltrarParaTest {
     @Test
-    public void FiltrarParaTest(){
+    public void FiltrarPara(){
+        
         EmailManager mailManager = new EmailManager();
+        
         Buzon buzon = new Buzon();
 
         mailManager.listMailbox.add(buzon);
@@ -24,9 +26,9 @@ public class FiltrarParaTest {
         
         para.add(destinatario);
 
-        Correo correo = new Correo("Hola", "me llamo alex", remitente , para,"2/10");
-        Correo correo1 = new Correo("Hola", "me llamo alex", remitente , para,"2/10");
-        Correo correo2 = new Correo("Hola", "me llamo pedro", remitente1 , para,"2/10");
+        Correo correo = new Correo("Hola", "me llamo alex", remitente , para);
+        Correo correo1 = new Correo("Hola", "me llamo alex", remitente , para);
+        Correo correo2 = new Correo("Hola", "me llamo pedro", remitente1 , para);
 
         mailManager.enviarCorreo(correo);
         mailManager.enviarCorreo(correo1);

@@ -20,9 +20,9 @@ public class filtroAsuntoContenidoTest {
         Contacto remitente2 = new Contacto();
         Contacto remitente3 = new Contacto();
         
-        Correo correo1 = new Correo("saludo", "Hola como estas",remitente ,new ArrayList<>(),"25/8");
-        Correo correo2 = new Correo("saludo", "Hola como estas",remitente2 ,new ArrayList<>(),"25/8");
-        Correo correo3 = new Correo("saludo", "Chau como estas",remitente3 ,new ArrayList<>(),"25/8");
+        Correo correo1 = new Correo("saludo", "Hola como estas",remitente ,new ArrayList<>());
+        Correo correo2 = new Correo("saludo", "Hola como estas",remitente2 ,new ArrayList<>());
+        Correo correo3 = new Correo("saludo", "Chau como estas",remitente3 ,new ArrayList<>());
     
         buzon1.setBandejaEntrada(bandejaEntrada);
         buzon1.getBandejaEntrada().add(correo1);

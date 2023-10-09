@@ -22,7 +22,7 @@ public class BuzonTest {
         Contacto destinatario = new Contacto("lucho","aquinopla@gmail.com");
         Contacto destinatario1 = new Contacto("lucho","aquinopla@gmail.com");
         
-        Correo correo = new Correo("buenas", "hola", remitente , para,"25/8");
+        Correo correo = new Correo("buenas", "hola", remitente , para);
 
         correo.para.add(destinatario);
         correo.para.add(destinatario1);
