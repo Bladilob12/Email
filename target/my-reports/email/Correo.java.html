@@ -21,32 +21,39 @@ public class Correo {
 <span class="fc" id="L21">        this.contenido = contenido;</span>
 <span class="fc" id="L22">        this.para = para;</span>
 <span class="fc" id="L23">        this.remitente = remitente;</span>
-    
-<span class="fc" id="L25">    }</span>
+<span class="fc" id="L24">    }</span>
     
     public String getAsunto() {
-<span class="fc" id="L28">        return asunto;</span>
+<span class="fc" id="L27">        return asunto;</span>
     }
     
     public String getContenido() {
-<span class="fc" id="L32">        return contenido;</span>
+<span class="fc" id="L31">        return contenido;</span>
     }
     
     public void setConetenido(String conetenido) {
-<span class="nc" id="L36">        this.contenido = conetenido;</span>
-<span class="nc" id="L37">    }</span>
+<span class="nc" id="L35">        this.contenido = conetenido;</span>
+<span class="nc" id="L36">    }</span>
 
     public List&lt;Contacto&gt; getPara() {
-<span class="fc" id="L40">        return para;</span>
+<span class="fc" id="L39">        return para;</span>
     }
     
     public Contacto getRemintente() {
-<span class="nc" id="L44">        return remitente;</span>
+<span class="fc" id="L43">        return remitente;</span>
     }
+
     public Contacto getRemitente() {
 <span class="nc" id="L47">        return remitente;</span>
     }
+    
+    public void setPara(List&lt;Contacto&gt; para) {
+<span class="fc" id="L51">        this.para = para;</span>
+<span class="fc" id="L52">    }</span>
 
+    public void setRemitente(Contacto remitente) {
+<span class="fc" id="L55">        this.remitente = remitente;</span>
+<span class="fc" id="L56">    }</span>
 }
 
 

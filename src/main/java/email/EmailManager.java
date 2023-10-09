@@ -3,7 +3,6 @@ package email;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class EmailManager{
@@ -48,14 +47,11 @@ public class EmailManager{
         for(Buzon buzon1 : listaCorreoUsuario){
             buzon1.bandejaEntrada.add(correo);
         }
-
     }
 
     public void enviarCorreo(Correo correo){
         crearBuzon(correo);
         agregarCorreoBandejaEnviados(correo);
         agregarCorreoBandejaEntrada(correo);
-        
-
     }
 }

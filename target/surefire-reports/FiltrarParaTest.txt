@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: FiltrarParaTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.008 s <<< FAILURE! - in FiltrarParaTest
-FiltrarPara(FiltrarParaTest)  Time elapsed: 0.002 s  <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because "usuario.bandejaEntrada" is null
-	at FiltrarParaTest.FiltrarPara(FiltrarParaTest.java:39)
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in FiltrarParaTest
+filtrarMailsRecibidosUsuario(FiltrarParaTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because "buzon1.bandejaEnviados" is null
+	at FiltrarParaTest.filtrarMailsRecibidosUsuario(FiltrarParaTest.java:44)
 
