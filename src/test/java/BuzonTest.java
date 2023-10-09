@@ -46,5 +46,4 @@ public class BuzonTest {
 
         assertTrue(buzon1.getBandejeEnviados().isEmpty());
     }
-
 }

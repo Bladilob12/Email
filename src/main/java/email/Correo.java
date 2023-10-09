@@ -43,9 +43,6 @@ public class Correo {
     public Contacto getRemintente() {
         return remitente;
     }
-    public String getFecha() {
-        return fecha;
-    }
     public Contacto getRemitente() {
         return remitente;
     }

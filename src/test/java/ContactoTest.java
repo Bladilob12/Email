@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
@@ -25,5 +26,13 @@ public class ContactoTest {
         assertTrue(correo.getPara().contains(destinatario));
         assertTrue(correo.getPara().contains(destinatario2));
     }
+    @Test
+    public void contactoCaracteristicas(){
+        Contacto contacto1 = new Contacto("Alex", "alex@gmail.com");
+
+        assertEquals(contacto1.getMail(),"alex@gmail.com");
+        assertEquals(contacto1.getName(),"Alex");
+    }
+
 
 }

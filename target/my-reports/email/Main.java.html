@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">email</a> &gt; <a href="index.source.html" class="el_package">email</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package email;
+
+import java.util.ArrayList;
+import java.util.List;
+
+<span class="nc" id="L6">public class Main {</span>
+    public static void main(String[] args) {
+        System.out.println(&quot;Hello world!&quot;);
+            
+        EmailManager mailManager = new EmailManager();
+<span class="nc" id="L11">        Buzon buzon = new Buzon(&quot;gonza.mata2003@gmail.com&quot;);</span>
+
+        mailManager.listMailbox.add(buzon);
+
+        List&lt;Contacto&gt; para = new ArrayList&lt;&gt;();
+        Contacto remitente = new Contacto(&quot;Alex&quot;, &quot;Alex@gmail.com&quot;);
+        Contacto remitente1 = new Contacto(&quot;Pedro&quot;, &quot;Pedro@gmail.com&quot;);
+        Contacto destinatario = new Contacto(&quot;Gonzalo&quot;,&quot;gonza.mata2003@gmail.com&quot;);
+        
+        para.add(destinatario);
+
+        Correo correo = new Correo(&quot;Hola&quot;, &quot;me llamo alex&quot;, remitente , para);
+        Correo correo1 = new Correo(&quot;Hola&quot;, &quot;me llamo alex&quot;, remitente , para);
+        Correo correo2 = new Correo(&quot;Hola&quot;, &quot;me llamo pedro&quot;, remitente1 , para);
+
+        mailManager.enviarCorreo(correo);
+        mailManager.enviarCorreo(correo1);
+        mailManager.enviarCorreo(correo2);
+
+        FiltroPara filtroPara = new FiltroPara();
+
+        filtroPara.filtrarPara(buzon, &quot;Pedro@gmail.com&quot;);
+
+        List&lt;Correo&gt; listaMailsUsuario = filtroPara.listaMailsUsuario;
+
+    for (Correo correoFiltrado : listaMailsUsuario){
+        System.out.println(&quot;Asunto: &quot; + correoFiltrado.getAsunto());
+        System.out.println(&quot;Contenido: &quot; + correoFiltrado.getContenido());
+        System.out.println(&quot;Remitente: &quot; + correoFiltrado.getRemitente().getMail());
+    }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

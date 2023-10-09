@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Correo.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">email</a> &gt; <a href="index.source.html" class="el_package">email</a> &gt; <span class="el_source">Correo.java</span></div><h1>Correo.java</h1><pre class="source lang-java linenums">package email;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Correo {
+
+    public String asunto;
+    public String contenido ;
+    public List&lt;Contacto&gt; para;
+    public Contacto remitente;
+
+<span class="fc" id="L14">    public Correo(){</span>
+<span class="fc" id="L15">        this.remitente = new Contacto();</span>
+<span class="fc" id="L16">        this.para = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L17">    }</span>
+
+<span class="fc" id="L19">    public Correo(String asunto, String contenido, Contacto remitente, List&lt;Contacto&gt; para){</span>
+<span class="fc" id="L20">        this.asunto = asunto;</span>
+<span class="fc" id="L21">        this.contenido = contenido;</span>
+<span class="fc" id="L22">        this.para = para;</span>
+<span class="fc" id="L23">        this.remitente = remitente;</span>
+    
+<span class="fc" id="L25">    }</span>
+    
+    public String getAsunto() {
+<span class="fc" id="L28">        return asunto;</span>
+    }
+    
+    public String getContenido() {
+<span class="fc" id="L32">        return contenido;</span>
+    }
+    
+    public void setConetenido(String conetenido) {
+<span class="nc" id="L36">        this.contenido = conetenido;</span>
+<span class="nc" id="L37">    }</span>
+
+    public List&lt;Contacto&gt; getPara() {
+<span class="fc" id="L40">        return para;</span>
+    }
+    
+    public Contacto getRemintente() {
+<span class="nc" id="L44">        return remitente;</span>
+    }
+    public Contacto getRemitente() {
+<span class="nc" id="L47">        return remitente;</span>
+    }
+
+}
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
