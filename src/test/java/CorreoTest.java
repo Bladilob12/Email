@@ -1,6 +1,6 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+
 
 import java.util.ArrayList;
 
@@ -26,6 +26,7 @@ public class CorreoTest {
 
     assertEquals(correo1.getAsunto(),"Saludo");
     assertEquals(correo1.getContenido(),"Holaa");
-   assertNotNull(correo1.remitente);
+    assertNotNull(correo1.remitente);
+    assertNotNull(correo1.para);    
     }
 }

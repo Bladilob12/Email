@@ -25,4 +25,10 @@ public class EmailManager{
         }
     }
     
+    public void enviarCorreo(Correo correo){
+        crearBuzon(correo);
+        agregaCorreoBandejaEnviados();
+        agregaCorreoBandejaEntrada();
+
+    }
 }

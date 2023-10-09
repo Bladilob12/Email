@@ -5,7 +5,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class FiltroPara {
-    List<Correo> listaMailsUsuario = new ArrayList<>();
+    public List<Correo> listaMailsUsuario = new ArrayList<>();
 
     public void filtrarPara(Buzon usuario, String contacto) {
         

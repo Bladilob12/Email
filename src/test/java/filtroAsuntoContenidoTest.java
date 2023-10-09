@@ -35,6 +35,5 @@ public class filtroAsuntoContenidoTest {
         List<Correo>correoFiltrado = filtro.filtrarPorAsuntoYContenido(buzon1,"saludo","Hola como estas");
         assertEquals(2,correoFiltrado.size());
     
-        }
     }
-
+}

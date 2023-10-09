@@ -21,7 +21,6 @@ public class Correo {
         this.contenido = contenido;
         this.para = para;
         this.remitente = remitente;
-    
     }
     
     public String getAsunto() {
@@ -43,10 +42,18 @@ public class Correo {
     public Contacto getRemintente() {
         return remitente;
     }
+
     public Contacto getRemitente() {
         return remitente;
     }
+    
+    public void setPara(List<Contacto> para) {
+        this.para = para;
+    }
 
+    public void setRemitente(Contacto remitente) {
+        this.remitente = remitente;
+    }
 }
 
 

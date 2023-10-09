@@ -20,4 +20,5 @@ public class Contacto {
         this.name = name;
         this.mail= mail; 
     }
+    
 }
