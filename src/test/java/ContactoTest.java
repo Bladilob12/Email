@@ -24,8 +24,6 @@ public class ContactoTest {
 
         assertTrue(correo.getPara().contains(destinatario));
         assertTrue(correo.getPara().contains(destinatario2));
-
-
     }
 
 }

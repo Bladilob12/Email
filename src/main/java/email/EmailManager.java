@@ -6,6 +6,7 @@ import java.util.List;
 public class EmailManager{
 
     public List<Buzon> listaBuzones;
+    public Object listMailbox;
 
 
     public EmailManager(){
