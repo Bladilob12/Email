@@ -1,6 +1,7 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 import email.Contacto;
 import email.Correo;
@@ -32,6 +33,7 @@ public class ContactoTest {
 
         assertEquals(contacto1.getMail(),"alex@gmail.com");
         assertEquals(contacto1.getName(),"Alex");
+      
     }
 
 

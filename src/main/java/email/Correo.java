@@ -43,10 +43,6 @@ public class Correo {
         return remitente;
     }
 
-    public Contacto getRemitente() {
-        return remitente;
-    }
-    
     public void setPara(List<Contacto> para) {
         this.para = para;
     }

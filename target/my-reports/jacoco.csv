@@ -1,10 +1,8 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
 email,email,FiltroAsuntoContenido,0,37,1,5,0,8,1,4,0,2
-email,email,FiltroCorreosRecibidos,30,0,0,0,5,0,3,0,3,0
 email,email,FiltroAsunto,0,22,0,0,0,4,0,3,0,3
 email,email,Buzon,0,28,0,0,0,12,0,6,0,6
 email,email,EmailManager,66,80,5,3,15,16,5,6,2,5
 email,email,Contacto,0,18,0,0,0,8,0,4,0,4
-email,email,FiltroPara,30,0,0,0,5,0,3,0,3,0
-email,email,Correo,7,48,0,0,3,18,2,8,2,8
+email,email,Correo,15,37,0,0,7,13,4,5,4,5
 email,email,FiltroContenido,0,22,0,0,0,4,0,3,0,3

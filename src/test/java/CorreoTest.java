@@ -26,7 +26,11 @@ public class CorreoTest {
 
     assertEquals(correo1.getAsunto(),"Saludo");
     assertEquals(correo1.getContenido(),"Holaa");
+
+
+    
     assertNotNull(correo1.remitente);
-    assertNotNull(correo1.para);    
+    assertNotNull(correo1.para);
+
     }
 }
